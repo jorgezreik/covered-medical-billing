@@ -12,6 +12,8 @@ This project was meant to be the website for a medical billing startup called Co
 
 I am releasing our codebase on GitHub for anyone who is interested in seeing what a SpringBoot and React app can look like!
 
+**Note:** A top level folder called `logos` contains our logos, and one called `portfolio` contains a portfolio of our site.
+
 ## Prerequisites
 
 * [npm](https://www.npmjs.com/get-npm)
