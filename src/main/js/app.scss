@@ -1,0 +1,171 @@
+@import "node_modules/bootstrap/scss/bootstrap.scss";
+@import "node_modules/bootstrap/scss/functions";
+
+$theme-colors: (
+    "primary": #779ee5,
+);
+
+* {
+    font-family: "Montserrat", sans-serif;
+}
+
+b {
+    font-weight: bold;
+}
+
+a {
+    color: black;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+}
+
+.modal-content {
+    border-radius: 0.8rem;
+}
+
+#root {
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: 1fr auto;
+}
+
+.footer {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    @media screen and (min-width: 601px) {
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+    @media screen and (max-width: 600px) {
+        margin: 0px;
+    }
+}
+
+.primary {
+    color: map-get($theme-colors, "primary");
+}
+
+.progress-bar-custom {
+    background-color: map-get($theme-colors, "primary");
+}
+
+.modal-max-width {
+    max-width: 600px;
+}
+
+.progress-bar.bg-custom {
+    background-color: map-get($theme-colors, "primary");
+}
+
+.invalid-feedback {
+    position: absolute;
+}
+
+.navbar {
+    z-index: 10;
+}
+
+.btn-main {
+    color: white;
+    background-color: map-get($theme-colors, "primary");
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-weight: bold;
+    &:hover {
+        color: white;
+        background-color: theme-color-level("primary", -3);
+    }
+    &:disabled {
+        background-color: theme-color-level("primary", -6);
+    }
+}
+
+.mast-left {
+    position: absolute;
+    width: 37vw;
+    bottom: -15%;
+    left: -10%;
+}
+
+.mast-right {
+    position: absolute;
+    height: 30vw;
+    right: 0;
+    bottom: -5%;
+}
+
+.masthead {
+    height: auto;
+    min-height: 75vh;
+
+    background-color: #eeeeee;
+
+    font: {
+        family: Helvetica;
+    }
+}
+
+.line-link {
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-decoration: underline;
+    color: black;
+    text-underline-offset: 7px;
+    text-decoration-thickness: 2px;
+    &:hover {
+        color: map-get($theme-colors, "primary");
+    }
+}
+
+.left-list {
+    position: absolute;
+    left: 0;
+}
+
+.floating-form {
+    padding: 1.5rem;
+    border-radius: 1.1rem;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.card-option {
+    .card-title {
+        color: map-get($theme-colors, "primary");
+        font-weight: bold;
+    }
+    .card-text {
+        font-weight: bold;
+    }
+    width: 20rem;
+}
+
+.option-list {
+    @media screen and (min-width: 601px) {
+        position: absolute;
+        left: 40px;
+    }
+    @media screen and (max-width: 600px) {
+        position: relative;
+    }
+    margin-top: 120px;
+}
+
+/* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
+@media screen and (min-width: 601px) {
+    .tiny-resize {
+        font-size: 12pt;
+    }
+}
+
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 600px) {
+    .tiny-resize {
+        font-size: 8pt;
+    }
+}
